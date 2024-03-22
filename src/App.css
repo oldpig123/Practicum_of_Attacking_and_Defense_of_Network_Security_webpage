@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+.banner {
+  display: flex; /* Arrange title and navigation side-by-side */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Align vertically */
+  padding: 1rem;
+  background-color: #f0f0f0; /* Optional background color */
+}
+
+.banner h1 {
+  margin: 0; /* Remove default margin */
+}
+
+.banner nav a {
+  padding: 0.5rem 1rem;
+  text-decoration: none; /* Remove underline */
+  color: #333;
+}
+
+.banner nav a.active {
+  font-weight: bold; /* Style the active link */
+}
