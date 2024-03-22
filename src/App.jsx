@@ -34,54 +34,64 @@
 
 // export default App
 
-// a webpage with a banner that contain "About" , Chat, and visitor counter. "About" will lead to a page that contain the information of the project. Chat will lead to a page that contain a chatroom. Visitor counter will show the number of visitor that visit the page.
+// a web page contains  a banner, which contain three tabs: About, Message Board and Visitor Counter
+// The About tab contains the introduction of the course
+// The Message Board tab contains the message board for the course
+// The Visitor Counter tab contains the visitor counter for the course
+// The visitor counter is implemented by using the useState hook of React
+// The visitor counter is initialized to 0
+// When the user clicks the Visitor Counter tab, the visitor counter is increased by 1
+// The visitor counter is displayed in the tab
+// The visitor counter is stored in the local storage of the browser
+// The visitor counter is loaded from the local storage of the browser when the page is loaded
+// The visitor counter is saved to the local storage of the browser when the page is unloaded
+// The message board is implemented by using the useState hook of React
+// The message board is initialized to an empty array
+// When the user submits a message, the message is added to the message board
+// The message board is displayed in the tab
+// The message board is stored in the local storage of the browser
+// The message board is loaded from the local storage of the browser when the page is loaded
+// The message board is saved to the local storage of the browser when the page is unloaded
+// The message board is displayed in reverse chronological order
+// The message board is limited to 10 messages
+// The message board contains the message text, the author name, and the timestamp
+// The message text is a string
+// The author name is a string
+// The timestamp is a string in the format "YYYY-MM-DD HH:MM:SS"
+// The message text is limited to 100 characters
+// The author name is limited to 20 characters
+// The timestamp is generated automatically
+// The message text and the author name are required
+// The message text and the author name are trimmed
+// The message text and the author name are escaped
+// The message text and the author name are sanitized
+// The message text and the author name are validated
+// The message text and the author name are formatted
+// The message text and the author name are localized
+
 // Path: src/App.jsx
+
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import About from './About'
-import Chat from './Chat'
+import MessageBoard from './MessageBoard'
+import VisitorCounter from './VisitorCounter'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tab, setTab] = useState('About')
 
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">About</Link>
-            </li>
-            <li>
-              <Link to="/chat">Chat</Link>
-            </li>
-            <li>
-              <Link to="/counter">Visitor counter</Link>
-            </li>
-          </ul>
-        </nav>
-        <Switch>
-          <Route path="/chat">
-            <Chat />
-          </Route>
-          <Route path="/counter">
-            <div>
-              <h1>Visitor counter</h1>
-              <p>Visitor count: {count}</p>
-              <button onClick={() => setCount((count) => count + 1)}>
-                Increment
-              </button>
-            </div>
-          </Route>
-          <Route path="/">
-            <About />
-          </Route>
-        </Switch>
+    <>
+      <div className="banner">
+        <button onClick={() => setTab('About')}>About</button>
+        <button onClick={() => setTab('Message Board')}>Message Board</button>
+        <button onClick={() => setTab('Visitor Counter')}>Visitor Counter</button>
       </div>
-    </Router>
+      {tab === 'About' && <About />}
+      {tab === 'Message Board' && <MessageBoard />}
+      {tab === 'Visitor Counter' && <VisitorCounter />}
+    </>
   )
 }
 
 export default App
-
