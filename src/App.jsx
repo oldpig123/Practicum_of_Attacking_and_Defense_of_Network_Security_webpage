@@ -1,23 +1,3 @@
-import React from 'react';
-import './App.css';
-import React_Router from './router';
-import Banner from './Banner'; // Import Banner component
-
-function App() {
-  return (
-    
-    <div className="App">
-      <Banner /> {/* Render Banner component */}
-      <React_Router /> { /* Render React_Router component */}
-    </div>
-    
-  );
-}
-
-export default App;
-
-
-
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
@@ -53,3 +33,55 @@ export default App;
 // }
 
 // export default App
+
+// a webpage with a banner that contain "About" , Chat, and visitor counter. "About" will lead to a page that contain the information of the project. Chat will lead to a page that contain a chatroom. Visitor counter will show the number of visitor that visit the page.
+// Path: src/App.jsx
+import { useState } from 'react'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import About from './About'
+import Chat from './Chat'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/chat">Chat</Link>
+            </li>
+            <li>
+              <Link to="/counter">Visitor counter</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/chat">
+            <Chat />
+          </Route>
+          <Route path="/counter">
+            <div>
+              <h1>Visitor counter</h1>
+              <p>Visitor count: {count}</p>
+              <button onClick={() => setCount((count) => count + 1)}>
+                Increment
+              </button>
+            </div>
+          </Route>
+          <Route path="/">
+            <About />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  )
+}
+
+export default App
+
