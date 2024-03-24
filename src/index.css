@@ -53,6 +53,21 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/*set the position of the banner at the top of the page, and make the About, Message Board and Visitor Counter Button beside the Course name*/
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.5em 1em;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

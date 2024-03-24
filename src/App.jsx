@@ -68,8 +68,29 @@
 // The message text and the author name are validated
 // The message text and the author name are formatted
 // The message text and the author name are localized
+// the banner is always displayed at the top of the page
+// at the left of the banner, there is the name of the course, followed by three clickable tabs: About, Message Board, and Visitor Counter
+// the tab that is currently selected is highlighted
+// when the user clicks a tab, the content of the tab is displayed below the banner
+// the content of the tab is centered on the page
+// the width of the banner is equal to the width of the page
+// the height of the banner is equal to the height of the tabs
+// the height of the tabs is slightly larger than the height of the text
+// the height of the content is equal to the height of the page minus the height of the banner
+// the content is displayed below the banner
+// the content is centered on the page
+// sign in and register buttons are displayed at the right of the banner
+// the sign in button is displayed to the left of the register button
+// use BrowserRouter to create a navigation bar with three tabs: About, Message Board, and Visitor Counter
+// use Route to display the content of the tab that is currently selected
+// use Link to navigate to the tab that is clicked
+// use NavLink to highlight the tab that is currently selected
+// use useHistory to navigate to the tab that is clicked
+// use useLocation to get the current tab
+// use useRouteMatch to get the current tab
+// use useParams to get the current tab
+// use useNavigate to navigate to the tab that is clicked
 
-// Path: src/App.jsx
 
 import { useState } from 'react'
 import About from './About'
@@ -83,13 +104,37 @@ function App() {
   return (
     <>
       <div className="banner">
-        <button onClick={() => setTab('About')}>About</button>
-        <button onClick={() => setTab('Message Board')}>Message Board</button>
-        <button onClick={() => setTab('Visitor Counter')}>Visitor Counter</button>
+        <h1>網路攻防實習</h1>
+        <div className="tabs">
+          <button
+            className={tab === 'About' ? 'active' : ''}
+            onClick={() => setTab('About')}
+          >
+            About
+          </button>
+          <button
+            className={tab === 'Message Board' ? 'active' : ''}
+            onClick={() => setTab('Message Board')}
+          >
+            Message Board
+          </button>
+          <button
+            className={tab === 'Visitor Counter' ? 'active' : ''}
+            onClick={() => setTab('Visitor Counter')}
+          >
+            Visitor Counter
+          </button>
+        </div>
+        <div className="buttons">
+          <button>Sign In</button>
+          <button>Register</button>
+        </div>
       </div>
-      {tab === 'About' && <About />}
-      {tab === 'Message Board' && <MessageBoard />}
-      {tab === 'Visitor Counter' && <VisitorCounter />}
+      <div className="content">
+        {tab === 'About' && <About />}
+        {tab === 'Message Board' && <MessageBoard />}
+        {tab === 'Visitor Counter' && <VisitorCounter />}
+      </div>
     </>
   )
 }

@@ -10,7 +10,7 @@ function VisitorCounter() {
     useEffect(() => {
         const storedCount = localStorage.getItem('count')
         if (storedCount) {
-            setCount(parseInt(storedCount))
+            setCount(parseInt(storedCount)+1)
         }
     }, [])
 
@@ -22,7 +22,7 @@ function VisitorCounter() {
         <div className="visitor-counter">
             <h1>Visitor Counter</h1>
             <p>{count} {count === 1 ? 'visitor' : 'visitors'}</p>
-            <button onClick={() => setCount(count + 1)}>Click me</button>
+            
         </div>
     )
 }

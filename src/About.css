@@ -1,0 +1,40 @@
+/*the photo is at the left side of the paragraph*/
+/*since the photo is a square, and the maximum height is not specified, but no more than the height of the paragraph*/
+img {
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        max-height: 400px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*the paragraph is at the right side of the photo*/
+/*the paragraph is horizontally centered to the photo*/
+p {
+        float: right;
+        text-align: justify;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        color: #FFF;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*the title is at the center of the page*/
+h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: Arial, sans-serif;
+        color: #FFF;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
