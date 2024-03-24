@@ -27,7 +27,7 @@ function About() {
         <div className="About">
         <h1>About</h1>
         <div className="About-container">
-            <img className="About-image" src="/img/B10807005.jpg" alt="Personal" />
+            <img className="About-image" src="./img/B10807005.jpg" alt="Personal" />
             <p className="About-text">
                 Name: 朱育辰<br/>
                 Student ID: R12942157<br/>
