@@ -1,7 +1,6 @@
 /*set the title of visitor counter and the counter text align to the center of the page*/
 .visitor-counter h1 {
   text-align: center;
-  font-size: 40px;
   font-family: Arial, sans-serif;
   color: #FFF;
   padding: 20px;
