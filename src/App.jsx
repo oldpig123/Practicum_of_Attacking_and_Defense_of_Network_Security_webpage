@@ -118,11 +118,8 @@ function App() {
           >
             Message Board
           </button>
-          <button
-            className={tab === 'Visitor Counter' ? 'active' : ''}
-            onClick={() => setTab('Visitor Counter')}
-          >
-            Visitor Counter
+          <button>
+          <VisitorCounter />
           </button>
         </div>
         <div className="buttons">
@@ -133,10 +130,21 @@ function App() {
       <div className="content">
         {tab === 'About' && <About />}
         {tab === 'Message Board' && <MessageBoard />}
-        {tab === 'Visitor Counter' && <VisitorCounter />}
       </div>
     </>
   )
 }
 
 export default App
+
+/*
+<h1>Visitor Counter</h1>
+*/
+/*
+<button
+            className={tab === 'Visitor Counter' ? 'active' : ''}
+            onClick={() => setTab('Visitor Counter')}
+          >
+            Visitor Counter
+          </button>
+          */

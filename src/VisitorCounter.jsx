@@ -20,8 +20,8 @@ function VisitorCounter() {
 
     return (
         <div className="visitor-counter">
-            <h1>Visitor Counter</h1>
-            <p>{count} {count === 1 ? 'visitor' : 'visitors'}</p>
+            
+            {count} {count === 1 ? 'visitor' : 'visitors'}
             
         </div>
     )
