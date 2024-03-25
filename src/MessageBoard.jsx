@@ -49,8 +49,9 @@ function MessageBoard() {
             <ul>
                 {messages.map((message, index) => (
                     <li key={index}>
-                        <span>{message.author} - {message.timestamp}</span>
                         <span>{message.text}</span>
+                        <span>{message.author} - {message.timestamp}</span>
+                        
                         
                     </li>
                 ))}
