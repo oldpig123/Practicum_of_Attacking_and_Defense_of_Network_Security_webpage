@@ -3,6 +3,7 @@
 //
 import React from 'react'
 import './About.css'
+import img from '/B10807005.jpg'
 //this page contains a personal photo and a brief introduction of myself
 //the personal photo is displayed on the left side of the page
 //the personal photo is a square image
@@ -25,18 +26,18 @@ import './About.css'
 function About() {
     return (
         <div className="About">
-        <h1>About</h1>
-        <div className="About-container">
-            <img className="About-image" src="./img/B10807005.jpg" alt="Personal" />
-            <p className="About-text">
-                Name: 朱育辰<br/>
-                Student ID: R12942157<br/>
-                This website is created for the course "Practicum of Attacking and Defense of Network Security"<br/>
-            </p>
-        </div>
+            <h1>About</h1>
+            <div className="About-container">
+                <img className="About-image" src={img} alt="Personal" />
+                <p className="About-text">
+                    Name: 朱育辰<br />
+                    Student ID: R12942157<br />
+                    This website is created for the course "Practicum of Attacking and Defense of Network Security"<br />
+                </p>
+            </div>
         </div>
     )
-    }
+}
 
 export default About
 
