@@ -1,0 +1,21 @@
+/*set the title of visitor counter and the counter text align to the center of the page*/
+.visitor-counter h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+  color: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*set the counter text align to the center of the page*/
+.visitor-counter p {
+  float: none;
+  text-align: center;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

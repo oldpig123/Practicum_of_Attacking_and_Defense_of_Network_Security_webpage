@@ -2,7 +2,7 @@
 // Path: src/VisitorCounter.jsx
 //
 import React, { useState, useEffect } from 'react'
-//import './VisitorCounter.css'
+import './VisitorCounter.css'
 
 function VisitorCounter() {
     const [count, setCount] = useState(0)
