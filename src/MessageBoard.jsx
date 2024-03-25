@@ -2,7 +2,7 @@
 // Path: src/MessageBoard.jsx
 //
 import React, { useState } from 'react'
-//import './MessageBoard.css'
+import './MessageBoard.css'
 
 function MessageBoard() {
     const [messages, setMessages] = useState([])
@@ -49,8 +49,9 @@ function MessageBoard() {
             <ul>
                 {messages.map((message, index) => (
                     <li key={index}>
-                        <p>{message.text}</p>
-                        <p>{message.author} - {message.timestamp}</p>
+                        <span>{message.author} - {message.timestamp}</span>
+                        <span>{message.text}</span>
+                        
                     </li>
                 ))}
             </ul>
